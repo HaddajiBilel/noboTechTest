@@ -43,16 +43,27 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <View>
-        <ToolbarAndroid/>
+      <View style={styles.container}>
+        <View style={styles.Button}>
         <Button
           title="Permission"
           onPress={this.requestCameraPermission}
         />
+        </View>
       </View>
     )}
 }
 const styles = StyleSheet.create({
-  
+  Button:{
+
+    alignItems: "center",
+  },
+
+  container:{
+    flex:1,
+    flexDirection:'row',
+    alignItems:'center',
+    justifyContent:'center',
+  }
 });
 
